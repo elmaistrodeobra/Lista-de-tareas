@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Huella Hídrica</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Huella Hídrica en Teñido </h1>
+        
+        <div class="formulario">
+            <input type="text" id="idLote" placeholder="ID del Lote (Ej. L-001)">
+            
+            <select id="tipoFibra">
+                <option value="algodon">Algodón (10,000L por kg)</option>
+                <option value="poliester">Poliéster (300L por kg)</option>
+            </select>
+            
+            <input type="number" id="kilogramos" placeholder="Kilogramos (Ej. 50)">
+            
+            <button id="btnRegistrar">Registrar Lote</button>
+        </div>
+
+        <div class="resultados">
+            <h3>Consumo Total Acumulado:</h3>
+            <p id="consumoTotal" class="normal">0 Litros</p>
+            <p id="mensajeAlerta" class="oculto"> ¡ALERTA! Límite ecológico excedido.</p>
+        </div>
+
+        <hr>
+        
+        <h3>Historial de Lotes</h3>
+        <ul id="historialLotes"></ul>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
